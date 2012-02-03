@@ -19,11 +19,10 @@ PRODUCT_PACKAGES := \
 # Audio
 PRODUCT_COPY_FILES += \
     device/moto/venus2/audio/libaudio.so:/system/lib/libaudio.so \
-    device/moto/venus2/audio/libaudiopolicy.so:/system/lib/libaudiopolicy.so
+    device/moto/venus2/audio/liba2dp.so:/system/lib/liba2dp.so
 
 PRODUCT_PACKAGES += \
     audio.primary.venus2 \
-    audio_policy.venus2 \
     libaudiohw_legacy \
     audio.a2dp.default \
     libaudioutils
@@ -55,6 +54,7 @@ PRODUCT_PACKAGES += \
 # Hijack files
 PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/bin/hijack:system/bin/hijack \
+    $(DEVICE_PREBUILT)/bin/adbd:system/bin/adbd \
     $(DEVICE_PREBUILT)/bin/hijack.log_dump:system/bin/hijack.log_dump \
     $(DEVICE_PREBUILT)/ramdisk/default.prop:root/default.prop \
     $(DEVICE_PREBUILT)/ramdisk/init:root/init \

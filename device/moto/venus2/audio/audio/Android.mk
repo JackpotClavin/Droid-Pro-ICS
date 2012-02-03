@@ -85,7 +85,7 @@ LOCAL_SHARED_LIBRARIES += libaudiopolicy
 endif
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)
-LOCAL_MODULE := audio_policy.venus2
+LOCAL_MODULE := audio_policy.this_is_not_used
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_TAGS := optional
 

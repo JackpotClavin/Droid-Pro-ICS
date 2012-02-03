@@ -13,12 +13,12 @@ $(file) : device/moto/venus2/audio/libaudio.so
 	@rm -rf $@
 	$(hide) cp -a device/moto/venus2/audio/libaudio.so $@
 
-file := $(LIBAUDIO_INTERMEDIATES_PREREQS)/libaudiopolicy.so
-$(file) : device/moto/venus2/audio/libaudiopolicy.so
-	@echo "Copy libaudiopolicy.so -> $@"
+file := $(LIBAUDIO_INTERMEDIATES_PREREQS)/liba2dp.so
+$(file) : device/moto/venus2/audio/liba2dp.so
+	@echo "Copy liba2dp.so -> $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) cp -a device/moto/venus2/audio/libaudiopolicy.so $@
+	$(hide) cp -a device/moto/venus2/audio/liba2dp.so $@
 
 include $(all-subdir-makefiles)
 
