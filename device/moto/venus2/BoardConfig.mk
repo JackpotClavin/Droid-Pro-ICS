@@ -101,6 +101,8 @@ ifdef USE_MOTOROLA_USERS
 COMMON_GLOBAL_CFLAGS += -DUSE_MOTOROLA_USERS
 endif
 
+TARGET_PROVIDES_INIT_RC := true
+
 # OTA Packaging
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/moto/venus2/releasetools/venus2_ota_from_target_files
@@ -111,7 +113,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun%d
 
 # Hijack
 TARGET_NEEDS_MOTOROLA_HIJACK := true
-BOARD_HIJACK_LOG_ENABLE := true
+#BOARD_HIJACK_LOG_ENABLE := true
 
 # Misc.
 #BOARD_USE_BATTERY_CHARGE_COUNTER := true

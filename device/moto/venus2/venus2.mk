@@ -1,5 +1,4 @@
 # This is the product configuration for a full venus2
-#
 
 DEVICE_PREBUILT := device/moto/venus2/prebuilt
 
@@ -37,16 +36,17 @@ PRODUCT_PACKAGES += \
 
 # HW Libs
 PRODUCT_PACKAGES += \
-    hwcomposer.default \
+    hwcomposer.default
 
 # Wifi
 PRODUCT_PACKAGES += \
     libCustomWifi \
-    wlan_loader \
+    wlan_loader
 
 PRODUCT_PACKAGES += \
     Superuser \
     su \
+    hijack-boot.zip
 
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -56,7 +56,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/bin/hijack:system/bin/hijack \
     $(DEVICE_PREBUILT)/bin/hijack.log_dump:system/bin/hijack.log_dump \
-    $(DEVICE_PREBUILT)/etc/hijack-boot.zip:system/etc/hijack-boot.zip
+    $(DEVICE_PREBUILT)/ramdisk/default.prop:root/default.prop \
+    $(DEVICE_PREBUILT)/ramdisk/init:root/init \
+    $(DEVICE_PREBUILT)/ramdisk/init.goldfish.rc:root/init.goldfish.rc \
+    $(DEVICE_PREBUILT)/ramdisk/init.mapphone_cdma.rc:root/init.mapphone_cdma.rc \
+    $(DEVICE_PREBUILT)/ramdisk/init.rc:root/init.rc \
+    $(DEVICE_PREBUILT)/ramdisk/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
+    $(DEVICE_PREBUILT)/ramdisk/ueventd.mapphone_cdma.rc:root/ueventd.mapphone_cdma.rc \
+    $(DEVICE_PREBUILT)/ramdisk/ueventd.rc:root/ueventd.rc \
+    $(DEVICE_PREBUILT)/ramdisk/sbin/2nd-init:root/sbin/2nd-init \
+    $(DEVICE_PREBUILT)/ramdisk/sbin/adbd:root/sbin/adbd \
+    $(DEVICE_PREBUILT)/ramdisk/sbin/getprop:root/sbin/getprop \
+    $(DEVICE_PREBUILT)/ramdisk/sbin/hijack:root/sbin/hijack \
+    $(DEVICE_PREBUILT)/ramdisk/sbin/hijack.killall:root/sbin/hijack.killall \
+    $(DEVICE_PREBUILT)/ramdisk/sbin/stop:root/sbin/stop
 
 # Permissions files
 PRODUCT_COPY_FILES += \
@@ -80,7 +93,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(DEVICE_PREBUILT)/etc/powervr.ini:system/etc/powervr.ini \
     $(DEVICE_PREBUILT)/etc/vold.fstab:system/etc/vold.fstab \
-    $(DEVICE_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip \
+    $(DEVICE_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Graphics
 PRODUCT_COPY_FILES += \
