@@ -27,6 +27,8 @@ PRODUCT_COPY_FILES := \
 
 PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/app/PhoneConfig.apk:/system/app/PhoneConfig.apk \
+    vendor/motorola/venus2/proprietary/app/Usb.apk:/system/app/Usb.apk \
+    vendor/motorola/venus2/proprietary/app/FileManager.apk:/system/app/FileManager.apk \
     vendor/motorola/venus2/proprietary/app/ProgramMenu.apk:/system/app/ProgramMenu.apk \
     vendor/motorola/venus2/proprietary/app/ProgramMenuSystem.apk:/system/app/ProgramMenuSystem.apk \
 
@@ -62,6 +64,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/etc/wifi/tiwlan_rfmd.ini:/system/etc/wifi/tiwlan_rfmd.ini \
     vendor/motorola/venus2/proprietary/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
     vendor/motorola/venus2/proprietary/lib/dsp/baseimage.dof:/system/lib/dsp/baseimage.dof \
+    vendor/motorola/venus2/proprietary/lib/libnmea.so:/system/lib/libnmea.so \
     vendor/motorola/venus2/proprietary/lib/dsp/conversions.dll64P:/system/lib/dsp/conversions.dll64P \
     vendor/motorola/venus2/proprietary/lib/dsp/h264vdec_sn.dll64P:/system/lib/dsp/h264vdec_sn.dll64P \
     vendor/motorola/venus2/proprietary/lib/dsp/h264venc_sn.dll64P:/system/lib/dsp/h264venc_sn.dll64P \

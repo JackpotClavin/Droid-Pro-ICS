@@ -110,6 +110,8 @@ TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := device/moto/venus2/releasetools/ven
 
 # UMS
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun%d/file"
+BOARD_USE_USB_MASS_STORAGE_SWITCH := true
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/moto/venus2/UsbController.cpp
 
 # Hijack
 TARGET_NEEDS_MOTOROLA_HIJACK := true

@@ -30,7 +30,7 @@ ro.modem_available=0
 ro.media.capture.flip=horizontalandvertical
 ro.config.play.bootsound=1
 ro.media.sensor.orient=90
-ro.usb.use_custom_service=1
+#ro.usb.use_custom_service=1
 
 # Default network type.
 # 4 => CDMA / EVDO.
@@ -171,7 +171,7 @@ ro.cdma.home.operator.isnan=1
 persist.radio.ap.phonetype=2
 #set system property for camera calibration in phone
 ro.mot.hw.calibratedImager=1
-ro.usb.use_custom_service=1
+#ro.usb.use_custom_service=1
 
 # Misc
 # use charge_counter for 1% battery increments
