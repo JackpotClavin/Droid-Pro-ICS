@@ -19,6 +19,7 @@ LOCAL_PATH := $(call my-dir)
 # output for hijack_boot
 HIJACK_BOOT_OUT := $(PRODUCT_OUT)/hijack-boot
 HIJACK_BOOT_OUT_UNSTRIPPED := $(TARGET_OUT_UNSTRIPPED)/hijack-boot
+ROOT_OUT_FOLDER := $(PRODUCT_OUT)/root
 
 # prerequisites for building hijack-boot.zip are defined in HIJACK_BOOT_PREREQS
 
@@ -61,6 +62,14 @@ HIJACK_BOOT_PREREQS += $(PRODUCT_OUT)/recovery.img
 #	$(hide) cp -a device/motorola/common/hijack-boot/hijack.killall $@
 #HIJACK_BOOT_PREREQS += $(file)
 
+# Delay copying default.prop
+file := $(HIJACK_BOOT_OUT)/default.prop
+$(file) : device/moto/venus2/prebuilt/ramdisk/default.prop
+	@echo "Copy default.prop -> $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) cp -a device/moto/venus2/prebuilt/ramdisk/default.prop $@
+HIJACK_BOOT_PREREQS += $(file)
 
 #include $(CLEAR_VARS)
 #LOCAL_SRC_FILES := getprop.c
