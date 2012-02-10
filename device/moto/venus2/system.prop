@@ -34,7 +34,7 @@ ro.media.sensor.orient=90
 
 # Default network type.
 # 4 => CDMA / EVDO.
-ro.telephony.default_network=4
+ro.telephony.default_network=7
 ro.com.google.clientid=android-motorola
 ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
 ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
@@ -177,4 +177,4 @@ ro.mot.hw.calibratedImager=1
 # use charge_counter for 1% battery increments
 ro.product.use_charge_counter=1
 persist.sys.usb.config=mass_storage,adb
-ro.config.disable_hw_accel=true
+#ro.config.disable_hw_accel=true

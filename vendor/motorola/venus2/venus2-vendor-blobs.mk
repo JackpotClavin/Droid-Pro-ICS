@@ -1,3 +1,4 @@
+
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,20 +31,44 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/app/Usb.apk:/system/app/Usb.apk \
     vendor/motorola/venus2/proprietary/app/FileManager.apk:/system/app/FileManager.apk \
     vendor/motorola/venus2/proprietary/app/ProgramMenu.apk:/system/app/ProgramMenu.apk \
-    vendor/motorola/venus2/proprietary/app/ProgramMenuSystem.apk:/system/app/ProgramMenuSystem.apk \
+    vendor/motorola/venus2/proprietary/app/ProgramMenuSystem.apk:/system/app/ProgramMenuSystem.apk
 
 # All the blobs necessary for venus2
 PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/lib/libmoto_gps.so:/system/lib/libmoto_gps.so \
     vendor/motorola/venus2/proprietary/bin/Hostapd:/system/bin/Hostapd \
+    vendor/motorola/venus2/proprietary/bin/SaveBPVer:/system/bin/SaveBPVer \
+    vendor/motorola/venus2/proprietary/bin/akmd2:/system/bin/akmd2 \
     vendor/motorola/venus2/proprietary/bin/ap_gain.bin:/system/bin/ap_gain.bin \
     vendor/motorola/venus2/proprietary/bin/ap_gain_mmul.bin:/system/bin/ap_gain_mmul.bin \
+    vendor/motorola/venus2/proprietary/bin/batch:/system/bin/batch \
     vendor/motorola/venus2/proprietary/bin/battd:/system/bin/battd \
+    vendor/motorola/venus2/proprietary/bin/btcmd:/system/bin/btcmd \
+    vendor/motorola/venus2/proprietary/bin/bthelp:/system/bin/bthelp \
     vendor/motorola/venus2/proprietary/bin/bttest_mot:/system/bin/bttest_mot \
     vendor/motorola/venus2/proprietary/bin/charge_only_mode:/system/bin/charge_only_mode \
+    vendor/motorola/venus2/proprietary/bin/chat-ril:/system/bin/chat-ril \
+    vendor/motorola/venus2/proprietary/bin/dbvc_atvc_property_set:/system/bin/dbvc_atvc_property_set \
+    vendor/motorola/venus2/proprietary/bin/dmt:/system/bin/dmt \
+    vendor/motorola/venus2/proprietary/bin/dund:/system/bin/dund \
+    vendor/motorola/venus2/proprietary/bin/ecckeyd:/system/bin/ecckeyd \
+    vendor/motorola/venus2/proprietary/bin/fdisk:/system/bin/fdisk \
+    vendor/motorola/venus2/proprietary/bin/firewall.sh:/system/bin/firewall.sh \
+    vendor/motorola/venus2/proprietary/bin/ftmipcd:/system/bin/ftmipcd \
+    vendor/motorola/venus2/proprietary/bin/gkilogd:/system/bin/gkilogd \
+    vendor/motorola/venus2/proprietary/bin/loadpreinstalls.sh:/system/bin/loadpreinstalls.sh \
+    vendor/motorola/venus2/proprietary/bin/mdm_panicd:/system/bin/mdm_panicd \
+    vendor/motorola/venus2/proprietary/bin/napics.sh:/system/bin/napics.sh \
     vendor/motorola/venus2/proprietary/bin/pppd:/system/bin/pppd \
     vendor/motorola/venus2/proprietary/bin/pppd-ril:/system/bin/pppd-ril \
+    vendor/motorola/venus2/proprietary/bin/pvrsrvinit:/system/bin/pvrsrvinit \
+    vendor/motorola/venus2/proprietary/bin/secclkd:/system/bin/secclkd \
+    vendor/motorola/venus2/proprietary/bin/smc_pa_ctrl:/system/bin/smc_pa_ctrl \
+    vendor/motorola/venus2/proprietary/bin/smoduled:/system/bin/smoduled \
+    vendor/motorola/venus2/proprietary/bin/startup_smc.sh:/system/bin/startup_smc.sh \
     vendor/motorola/venus2/proprietary/bin/tcmd:/system/bin/tcmd \
+    vendor/motorola/venus2/proprietary/bin/testpppd:/system/bin/testpppd \
+    vendor/motorola/venus2/proprietary/bin/tstmetainfo:/system/bin/tstmetainfo \
     vendor/motorola/venus2/proprietary/bin/usbd:/system/bin/usbd \
     vendor/motorola/venus2/proprietary/etc/excluded-input-devices.xml:/system/etc/excluded-input-devices.xml \
     vendor/motorola/venus2/proprietary/etc/firmware/ap_bt_data.bin:/system/etc/firmware/firmware/ap_bt_data.bin \
@@ -94,8 +119,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/lib/libbattd.so:/system/lib/libbattd.so \
     vendor/motorola/venus2/proprietary/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
     vendor/motorola/venus2/proprietary/lib/libpppd_plugin-ril.so:/system/lib/libpppd_plugin-ril.so \
-    vendor/motorola/venus2/proprietary/lib/libreference-ril.so:/system/lib/libreference-ril.so \
-    vendor/motorola/venus2/proprietary/lib/libril.so:/system/lib/libril.so \
+    vendor/motorola/venus2/proprietary/etc/pppd-ril.options:/system/etc/ppp/peers/pppd-ril.options \
+    vendor/motorola/venus2/proprietary/lib/libpppd_plugin.so:/system/lib/libpppd_plugin.so \
     vendor/motorola/venus2/proprietary/lib/libusc.so:/system/lib/libusc.so \
     vendor/motorola/venus2/proprietary/lib/hw/lights.venus2.so:/system/lib/hw/lights.venus2.so \
     vendor/motorola/venus2/proprietary/lib/hw/sensors.venus2.so:/system/lib/hw/sensors.venus2.so \

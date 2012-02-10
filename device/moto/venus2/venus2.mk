@@ -1,5 +1,4 @@
 # This is the product configuration for a full venus2
-
 DEVICE_PREBUILT := device/moto/venus2/prebuilt
 
 # The gps config appropriate for this device
@@ -13,8 +12,9 @@ PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 PRODUCT_PACKAGES := \
-    charger \
-    charger_res_images
+    rild \
+    libril \
+    libreference-ril
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -22,7 +22,7 @@ PRODUCT_COPY_FILES += \
     device/moto/venus2/audio/liba2dp.so:/system/lib/liba2dp.so
 
 PRODUCT_PACKAGES += \
-    audio.primary.venus2 \
+    audio.primary.omap3 \
     libaudiohw_legacy \
     audio.a2dp.default \
     libaudioutils
@@ -30,8 +30,7 @@ PRODUCT_PACKAGES += \
 # Modem
 PRODUCT_PACKAGES += \
     libreference-cdma-sms \
-    rild \
-    radiooptions \
+    radiooptions
 
 # HW Libs
 PRODUCT_PACKAGES += \
@@ -60,6 +59,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/ramdisk/init:root/init \
     $(DEVICE_PREBUILT)/ramdisk/init.goldfish.rc:root/init.goldfish.rc \
     $(DEVICE_PREBUILT)/ramdisk/init.mapphone_cdma.rc:root/init.mapphone_cdma.rc \
+    $(DEVICE_PREBUILT)/ramdisk/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
     $(DEVICE_PREBUILT)/ramdisk/init.rc:root/init.rc \
     $(DEVICE_PREBUILT)/ramdisk/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
     $(DEVICE_PREBUILT)/ramdisk/ueventd.mapphone_cdma.rc:root/ueventd.mapphone_cdma.rc \
@@ -112,7 +112,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/imgtec/libeglinfo.so:system/lib/egl/libeglinfo.so \
     $(DEVICE_PREBUILT)/imgtec/libgles1_texture_stream.so:system/lib/egl/libgles1_texture_stream.so \
     $(DEVICE_PREBUILT)/imgtec/libgles2_texture_stream.so:system/lib/egl/libgles2_texture_stream.so \
-    $(DEVICE_PREBUILT)/imgtec/gralloc.omap3.so:system/lib/hw/gralloc.omap3.so \
+    $(DEVICE_PREBUILT)/imgtec/gralloc.omap3.so:system/lib/hw/gralloc.omap3.so
 
 # Key Layouts
 PRODUCT_COPY_FILES += \
@@ -124,7 +124,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/usr/keylayout/sholes-keypad.kl:system/usr/keylayout/sholes-keypad.kl \
     $(DEVICE_PREBUILT)/usr/keychars/cpcap-key.kcm:system/usr/keychars/cpcap-key.kcm \
     $(DEVICE_PREBUILT)/usr/keychars/qtouch-touchscreen.kcm:system/usr/keychars/qtouch-touchscreen.kcm \
-    $(DEVICE_PREBUILT)/usr/keychars/sholes-keypad.kcm:system/usr/keychars/sholes-keypad.kcm \
+    $(DEVICE_PREBUILT)/usr/keychars/sholes-keypad.kcm:system/usr/keychars/sholes-keypad.kcm
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -145,6 +145,46 @@ PRODUCT_COPY_FILES += $(shell \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
     | tr '\n' ' ')
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.android.ril=yes \
+    persist.ril.mux.noofchannels=8 \
+    persist.ril.mux.ttydevice=/dev/ttyS0 \
+    persist.ril.modem.ttydevice=/dev/usb/tty1-3:1.4 \
+    persist.ril.features=0x0E \
+    persist.ril.mux.retries=500 \
+    persist.ril.mux.sleep=2 \
+    ro.product.multi_touch_enabled=true \
+    ro.product.max_num_touch=2 \
+    ro.telephony.sms_segment_size=160 \
+    ro.setupwizard.mode=OPTIONAL \
+    ro.com.google.gmsversion=2.2_r7 \
+    ro.telephony.call_ring.multiple=false \
+    ro.telephony.call_ring.delay=1000 \
+    ro.setupwizard.enable_bypass=1 \
+    ro.com.google.clientid=android-motorola \
+    ro.com.google.clientidbase=android-verizon \
+    ro.com.google.clientidbase.am=android-verizon \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.cdma.home.operator.numeric=310004 \
+    ro.cdma.home.operator.alpha=Verizon \
+    ro.config.vc_call_vol_steps=10 \
+    ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
+    ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000 \
+    ro.com.motorola.smartsensor=true \
+    ro.media.capture.maxres=5m \
+    ro.media.capture.fast.fps=4 \
+    ro.media.capture.slow.fps=60 \
+    ro.media.capture.flash=led \
+    ro.media.capture.classification=classF \
+    ro.media.capture.useDFR=1 \
+    ro.media.capture.torchIntensity=45 \
+    ro.media.camera.focal=3564.0,3564.0 \
+    ro.media.camera.principal=1632.0,1224.0 \
+    ro.media.camera.skew=0.0 \
+    ro.media.camera.distortion=0.0,0.0,0.0,0.0,0.0 \
+    ro.media.camera.calresolution=3264,2448
+
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/moto/venus2/kernel
 else
@@ -161,4 +201,3 @@ $(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_NAME := cm_venus2
 PRODUCT_DEVICE := venus2
-
