@@ -1,4 +1,3 @@
-
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,6 +28,7 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/app/PhoneConfig.apk:/system/app/PhoneConfig.apk \
     vendor/motorola/venus2/proprietary/app/Usb.apk:/system/app/Usb.apk \
+    vendor/motorola/venus2/proprietary/app/GlobalNwSwitch.apk:/system/app/GlobalNwSwitch.apk \
     vendor/motorola/venus2/proprietary/app/FileManager.apk:/system/app/FileManager.apk \
     vendor/motorola/venus2/proprietary/app/ProgramMenu.apk:/system/app/ProgramMenu.apk \
     vendor/motorola/venus2/proprietary/app/ProgramMenuSystem.apk:/system/app/ProgramMenuSystem.apk

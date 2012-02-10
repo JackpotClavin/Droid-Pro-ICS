@@ -87,5 +87,5 @@ key 12    MINUS
 key 13    EQUALS
 key 215   AT
 
-key 247   TAB
+key 247   CTRL_RIGHT
 key 246   CAMERA

@@ -220,27 +220,22 @@ key PERIOD {
 key SPACE {
     label:                              ' '
     base:                               ' '
-    shift, capslock:                    ' '
-    alt, shift+alt:                     '\u01ef'
-}
-
-key TAB {
-    label:                              '\t'
-    base:                               '\t'
-    shift, capslock:                    '\t'
-    alt, shift+alt:                     '~'
+    capslock:				' '
+    alt, shift+alt:                     '\uef01'
 }
 
 key AT {
     label:                              '@'
     base:                               '@'
-    shift, capslock:                    '@'
+    shift:                              '\t'
     alt, shift+alt:                     '~'
 }
 
 key ENTER {
     label:                              '\n'
     base:                               '\n'
-    shift, capslock:                    '\n'
+    shift:                              '\n'
+    ctrl:				fallback DPAD_CENTER
+    capslock:				'\n'
     alt, shift+alt:                     '\n'
 }
