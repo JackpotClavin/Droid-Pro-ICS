@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/bin/adbd:system/bin/adbd \
     $(DEVICE_PREBUILT)/bin/hijack.log_dump:system/bin/hijack.log_dump \
     $(DEVICE_PREBUILT)/ramdisk/default.prop:root/default.prop \
-    $(DEVICE_PREBUILT)/ramdisk/init:root/init \
     $(DEVICE_PREBUILT)/ramdisk/init.goldfish.rc:root/init.goldfish.rc \
     $(DEVICE_PREBUILT)/ramdisk/init.mapphone_cdma.rc:root/init.mapphone_cdma.rc \
     $(DEVICE_PREBUILT)/ramdisk/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
