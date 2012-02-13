@@ -60,6 +60,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/ramdisk/init.mapphone_cdma.rc:root/init.mapphone_cdma.rc \
     $(DEVICE_PREBUILT)/ramdisk/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
     $(DEVICE_PREBUILT)/ramdisk/init.rc:root/init.rc \
+    $(DEVICE_PREBUILT)/ramdisk/init:root/init \
     $(DEVICE_PREBUILT)/ramdisk/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
     $(DEVICE_PREBUILT)/ramdisk/ueventd.mapphone_cdma.rc:root/ueventd.mapphone_cdma.rc \
     $(DEVICE_PREBUILT)/ramdisk/ueventd.rc:root/ueventd.rc \
