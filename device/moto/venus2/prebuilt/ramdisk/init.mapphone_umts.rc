@@ -255,11 +255,14 @@ on boot
 
 # The properties introduced by moto
 
+# Charge only mode service
+    exec /system/bin/mot_boot_mode
 on property:sys.chargeonly.mode=1
     start battd
     start console
     write /data/chargeonlymode charging
     exec /system/bin/charge_only_mode
+    exec /system/bin/stop zygote
 
 # Power up to normal
 on property:tcmd.suspend=0
