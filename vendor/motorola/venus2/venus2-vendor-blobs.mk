@@ -39,6 +39,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/bin/Hostapd:/system/bin/Hostapd \
     vendor/motorola/venus2/proprietary/bin/SaveBPVer:/system/bin/SaveBPVer \
     vendor/motorola/venus2/proprietary/bin/akmd2:/system/bin/akmd2 \
+    vendor/motorola/venus2/proprietary/bin/mot_boot_mode:/system/bin/mot_boot_mode \
+    vendor/motorola/venus2/proprietary/bin/charge_only_mode:/system/bin/charge_only_mode \
     vendor/motorola/venus2/proprietary/bin/ap_gain.bin:/system/bin/ap_gain.bin \
     vendor/motorola/venus2/proprietary/bin/ap_gain_mmul.bin:/system/bin/ap_gain_mmul.bin \
     vendor/motorola/venus2/proprietary/bin/batch:/system/bin/batch \
