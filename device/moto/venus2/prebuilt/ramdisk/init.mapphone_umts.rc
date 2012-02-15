@@ -255,15 +255,6 @@ on boot
 
 # The properties introduced by moto
 
-# Charge only mode service
-    exec /system/bin/mot_boot_mode
-on property:sys.chargeonly.mode=1
-    start battd
-    start console
-    write /data/chargeonlymode charging
-    exec /system/bin/charge_only_mode
-    exec /system/bin/stop zygote
-
 # Power up to normal
 on property:tcmd.suspend=0
     class_start pre-zygote_services
@@ -309,8 +300,6 @@ on property:sys.shutdown=1
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
-# The following services are added by moto
-
 # Set property strings for ATVC logging
 # This conditionally sets :
 # ro.sys.atvc_allow_bp_log
@@ -323,6 +312,16 @@ on property:init.svc.wpa_supplicant=stopped
 # ro.sys.atvc_allow_netmon_usb
 # ro.sys.atvc_allow_netmon_ih
 # ro.sys.atvc_allow_all_adb
+
+on property:sys.chargeonly.mode=1
+    class_reset main
+    class_reset late_start
+    class_start charger
+    start console
+    start battd
+    start chargeonly
+    stop zygote
+
 service atvc /system/bin/dbvc_atvc_property_set
     class pre-zygote_services
     user system
@@ -370,12 +369,15 @@ service rild_tcmd /system/bin/rild_tcmd
     socket rild_tcmd stream 0660 radio mot_tcmd
     user radio
     group radio
-
+service chargeonly system/bin/charge_only_mode
+    group root
+    oneshot
+    disabled
 service battd /system/bin/battd
-    class pre-zygote_services
-    socket battdsock stream 0660 mot_accy mot_accy
+    class core
+    socket battdsock stream 660 root system
     user root
-    group mot_accy mot_pwric
+    group system
     oneshot
 
 service catcommands /system/bin/catcommands

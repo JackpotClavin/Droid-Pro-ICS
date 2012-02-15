@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/app/GlobalNwSwitch.apk:/system/app/GlobalNwSwitch.apk \
     vendor/motorola/venus2/proprietary/app/FileManager.apk:/system/app/FileManager.apk \
     vendor/motorola/venus2/proprietary/app/ProgramMenu.apk:/system/app/ProgramMenu.apk \
+    vendor/motorola/venus2/proprietary/app/Torch.apk:/system/app/Torch.apk \
     vendor/motorola/venus2/proprietary/app/ProgramMenuSystem.apk:/system/app/ProgramMenuSystem.apk
 
 # All the blobs necessary for venus2
@@ -123,6 +124,54 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/venus2/proprietary/etc/pppd-ril.options:/system/etc/ppp/peers/pppd-ril.options \
     vendor/motorola/venus2/proprietary/lib/libpppd_plugin.so:/system/lib/libpppd_plugin.so \
     vendor/motorola/venus2/proprietary/lib/libusc.so:/system/lib/libusc.so \
+    vendor/motorola/venus2/proprietary/lib/libarcsoftpe.so:/system/lib/libarcsoftpe.so \
+    vendor/motorola/venus2/proprietary/lib/libarcsoft.so:/system/lib/libarcsoft.so \
+    vendor/motorola/venus2/proprietary/lib/libbattd.so:/system/lib/libbattd.so \
+    vendor/motorola/venus2/proprietary/lib/libcaps.so:/system/lib/libcaps.so \
+    vendor/motorola/venus2/proprietary/lib/libcryptoki.so:/system/lib/libcryptoki.so \
+    vendor/motorola/venus2/proprietary/lib/libdmengine.so:/system/lib/libdmengine.so \
+    vendor/motorola/venus2/proprietary/lib/libdmjavaplugin.so:/system/lib/libdmjavaplugin.so \
+    vendor/motorola/venus2/proprietary/lib/libglslcompiler.so:/system/lib/libglslcompiler.so \
+    vendor/motorola/venus2/proprietary/lib/libhostapd_client.so:/system/lib/libhostapd_client.so \
+    vendor/motorola/venus2/proprietary/lib/libimage_jni.so:/system/lib/libimage_jni.so \
+    vendor/motorola/venus2/proprietary/lib/libjanus.so:/system/lib/libjanus.so \
+    vendor/motorola/venus2/proprietary/lib/libjanus_jni.so:/system/lib/libjanus_jni.so \
+    vendor/motorola/venus2/proprietary/lib/libmediaext.so:/system/lib/libmediaext.so \
+    vendor/motorola/venus2/proprietary/lib/libmetainfo.so:/system/lib/libmetainfo.so \
+    vendor/motorola/venus2/proprietary/lib/libmot_atcmd.so:/system/lib/libmot_atcmd.so \
+    vendor/motorola/venus2/proprietary/lib/libmot_atcmd_mflex.so:/system/lib/libmot_atcmd_mflex.so \
+    vendor/motorola/venus2/proprietary/lib/libmot_bluetooth_jni.so:/system/lib/libmot_bluetooth_jni.so \
+    vendor/motorola/venus2/proprietary/lib/libmot_btpan_jni.so:/system/lib/libmot_btpan_jni.so \
+    vendor/motorola/venus2/proprietary/lib/libmot_led.so:/system/lib/libmot_led.so \
+    vendor/motorola/venus2/proprietary/lib/libmotdrm1.so:/system/lib/libmotdrm1.so \
+    vendor/motorola/venus2/proprietary/lib/libmotdrm1_jni.so:/system/lib/libmotdrm1_jni.so \
+    vendor/motorola/venus2/proprietary/lib/libmoto_netutil.so:/system/lib/libmoto_netutil.so \
+    vendor/motorola/venus2/proprietary/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
+    vendor/motorola/venus2/proprietary/lib/libmotodbgutils.so:/system/lib/libmotodbgutils.so \
+    vendor/motorola/venus2/proprietary/lib/libmtp_jni.so:/system/lib/libmtp_jni.so \
+    vendor/motorola/venus2/proprietary/lib/libmtpstack.so:/system/lib/libmtpstack.so \
+    vendor/motorola/venus2/proprietary/lib/libnativedrm1.so:/system/lib/libnativedrm1.so \
+    vendor/motorola/venus2/proprietary/lib/liboemcamera.so:/system/lib/liboemcamera.so \
+    vendor/motorola/venus2/proprietary/lib/libomx_arcomxcore_sharedlibrary.so:/system/lib/libomx_arcomxcore_sharedlibrary.so \
+    vendor/motorola/venus2/proprietary/lib/libpanorama.so:/system/lib/libpanorama.so \
+    vendor/motorola/venus2/proprietary/lib/libpanorama_jni.so:/system/lib/libpanorama_jni.so \
+    vendor/motorola/venus2/proprietary/lib/libpkip.so:/system/lib/libpkip.so \
+    vendor/motorola/venus2/proprietary/lib/libpppd_plugin-ril.so:/system/lib/libpppd_plugin-ril.so \
+    vendor/motorola/venus2/proprietary/lib/libpppd_plugin.so:/system/lib/libpppd_plugin.so \
+    vendor/motorola/venus2/proprietary/lib/libprojectM.so:/system/lib/libprojectM.so \
+    vendor/motorola/venus2/proprietary/lib/libprovlib.so:/system/lib/libprovlib.so \
+    vendor/motorola/venus2/proprietary/lib/libpvr2d.so:/system/lib/libpvr2d.so \
+    vendor/motorola/venus2/proprietary/lib/libpvrANDROID_WSEGL.so:/system/lib/libpvrANDROID_WSEGL.so \
+    vendor/motorola/venus2/proprietary/lib/libscalado.so:/system/lib/libscalado.so \
+    vendor/motorola/venus2/proprietary/lib/libsmapi.so:/system/lib/libsmapi.so \
+    vendor/motorola/venus2/proprietary/lib/libsrv_init.so:/system/lib/libsrv_init.so \
+    vendor/motorola/venus2/proprietary/lib/libsrv_um.so:/system/lib/libsrv_um.so \
+    vendor/motorola/venus2/proprietary/lib/libssmgr.so:/system/lib/libssmgr.so \
+    vendor/motorola/venus2/proprietary/lib/libtpa.so:/system/lib/libtpa.so \
+    vendor/motorola/venus2/proprietary/lib/libtpa_core.so:/system/lib/libtpa_core.so \
+    vendor/motorola/venus2/proprietary/lib/libui3d.so:/system/lib/libui3d.so \
+    vendor/motorola/venus2/proprietary/lib/libvideoeditorlite.so:/system/lib/libvideoeditorlite.so \
+    vendor/motorola/venus2/proprietary/lib/libwbxmlparser.so:/system/lib/libwbxmlparser.so \
     vendor/motorola/venus2/proprietary/lib/hw/lights.venus2.so:/system/lib/hw/lights.venus2.so \
     vendor/motorola/venus2/proprietary/lib/hw/sensors.venus2.so:/system/lib/hw/sensors.venus2.so \
     vendor/motorola/venus2/proprietary/lib/hw/gps.venus2.so:/system/lib/hw/gps.venus2.so

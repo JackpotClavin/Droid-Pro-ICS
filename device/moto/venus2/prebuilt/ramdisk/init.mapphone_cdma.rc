@@ -238,9 +238,6 @@ on boot
     # Enable panic on softlockup
     write /proc/sys/kernel/softlockup_panic 1
 
-    setprop ro.build.product shadow
-    setprop ro.product.device shadow
-
 # Define Motorola DBVC ATVC Property defaults (failsafe properties)
     setprop ro.sys.atvc_allow_netmon_usb 0
     setprop ro.sys.atvc_allow_netmon_ih 0
@@ -273,15 +270,21 @@ on boot
    chmod 0660 /sys/class/leds/green/brightness
    chown system system /sys/class/leds/blue/brightness
    chmod 0660 /sys/class/leds/blue/brightness
-   chmod 0660 /sys/class/leds/torch-flash/camera_strobe
-   chmod 0660 /sys/class/leds/torch-flash/flash_light
    chown system system /sys/class/leds/torch-flash/camera_strobe
+   chmod 0660 /sys/class/leds/torch-flash/camera_strobe
    chown system system /sys/class/leds/torch-flash/flash_light
+   chmod 0660 /sys/class/leds/torch-flash/flash_light
    chown system system /sys/class/leds/spotlight/brightness
+   chmod 0666 /sys/class/leds/spotlight/brightness
    chmod 0660 /sys/class/backlight/adp8870_bl/brightness
    chown system system /sys/class/backlight/adp8870_bl/brightness
    chmod 0660 /sys/class/leds/adp8870-led7/brightness
    chown system system /sys/class/leds/adp8870-led7/brightness
+
+#fix for torch
+    chmod 0666 /sys/class/leds/spotlight/brightness
+    chmod 0666 /sys/class/leds/torch-flash/brightness
+    chmod 0666 /sys/class/leds/torch-flash/flash_light
 
 # Load traffic shaping modules
     insmod /system/lib/modules/ifb.ko
@@ -295,17 +298,11 @@ on boot
 # Load Authentec VPN kernel module
     insmod /system/lib/modules/vpnclient.ko
 
+# Start services
+    exec /system/bin/mot_boot_mode
+
 # Set core max size (2G)
     setrlimit 4 2147483648 2147483648
-
-# Charge only mode service
-    exec /system/bin/mot_boot_mode
-on property:sys.chargeonly.mode=1
-    start battd
-    start console
-    write /data/chargeonlymode charging
-    exec /system/bin/charge_only_mode
-    exec /system/bin/stop zygote
 
 # Moto safe power down
 on property:sys.reboot=1
@@ -344,6 +341,16 @@ on property:service.adb.root=1
     restart adbd
     write /sys/devices/virtual/usb_composite/adb/enable 1
 
+on property:sys.chargeonly.mode=1
+    class_reset main
+    class_reset late_start
+    class_start charger
+    start console
+    start battd
+    start chargeonly
+    stop zygote
+
+
 service reboot_key /system/bin/reboot
     user system
     group root
@@ -369,8 +376,12 @@ service gkisystem /system/bin/gkisystem
     socket gpshal_socket stream 660 radio system
     socket opprofdaemon stream 660 radio system
     group radio system
+service chargeonly system/bin/charge_only_mode
+    group root
+    oneshot
+    disabled
 service battd /system/bin/battd
-    class main
+    class core
     socket battdsock stream 660 root system
     user root
     group system
