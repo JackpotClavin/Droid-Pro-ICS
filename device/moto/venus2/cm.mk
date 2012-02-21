@@ -8,7 +8,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, device/moto/venus2/venus2.mk)
 
 # Inherit our vendor filez, yo.
-$(call inherit-product, vendor/motorola/venus2/venus2-vendor.mk)
+$(call inherit-product, vendor/moto/venus2/venus2-vendor.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_venus2

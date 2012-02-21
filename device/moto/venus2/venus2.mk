@@ -200,7 +200,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 $(call inherit-product, hardware/ti/omap3/Android.mk)
-$(call inherit-product, vendor/motorola/venus2/venus2-vendor.mk)
+$(call inherit-product, vendor/moto/venus2/venus2-vendor.mk)
 $(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, build/target/product/full_base.mk)
 
