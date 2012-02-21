@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
 # Modem
 PRODUCT_PACKAGES += \
     libreference-cdma-sms \
+    GlobalNwSwitch \
     radiooptions
 
 # HW Libs
@@ -39,6 +40,7 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     libCustomWifi \
+    wlan_cu \
     wlan_loader
 
 PRODUCT_PACKAGES += \
@@ -183,7 +185,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.camera.principal=1632.0,1224.0 \
     ro.media.camera.skew=0.0 \
     ro.media.camera.distortion=0.0,0.0,0.0,0.0,0.0 \
-    ro.media.camera.calresolution=3264,2448
+    ro.media.camera.calresolution=3264,2448 \
+    ro.ril.ntmodeglobal=true \
+    persist.ril.pppd.start.fail.max=16 \
+    mobiledata.interfaces=ppp0 
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/moto/venus2/kernel
