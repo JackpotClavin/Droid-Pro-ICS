@@ -6,6 +6,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/moto/venus2/venus2.mk)
+$(call inherit-product, device/moto/venus2/prebuilt/bootmenu/Bootmenu.mk)
 
 # Inherit our vendor filez, yo.
 $(call inherit-product, vendor/moto/venus2/venus2-vendor.mk)

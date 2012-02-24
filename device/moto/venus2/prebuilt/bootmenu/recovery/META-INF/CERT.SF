@@ -1,0 +1,82 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: JR0/yA5KSlbZ9hRjmYGsAdCW9Ow=
+
+Name: res/images/indeterminate3.png
+SHA1-Digest: jlCGZ7nI4hxWYxhxIBMo5vxd/I0=
+
+Name: sbin/sdparted
+SHA1-Digest: Rgc4U3cefe0ABH9H+OKsA2f4wm8=
+
+Name: sbin/adbd
+SHA1-Digest: J4tgKStR7KtZdS9mrxJ/PgWZvWU=
+
+Name: res/images/progress_empty.png
+SHA1-Digest: AfpR5cXzKZlY8/eABPh8XwZE35o=
+
+Name: sbin/nandroid-md5.sh
+SHA1-Digest: IY73x4Ieixmp025KzkStvYqvlHY=
+
+Name: res/images/indeterminate2.png
+SHA1-Digest: cJgwFK7QDKJkBUV02xiX/3Nv7t8=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: ISSg00EL9EFRmu7wf5UHOj1l9ps=
+
+Name: sbin/recovery
+SHA1-Digest: hsuToDy606at0yhYiukX52YK5hw=
+
+Name: res/images/indeterminate1.png
+SHA1-Digest: cI42+L2glJX1m4wAYxVbEInAJyw=
+
+Name: sbin/tune2fs
+SHA1-Digest: Ai7fdGAOIoCvDKtO3UjMm9MTnOI=
+
+Name: sbin/parted
+SHA1-Digest: zI5SXeBzqM3joCtEsS/BCBrl0qI=
+
+Name: res/images/indeterminate6.png
+SHA1-Digest: gMAkQInL2iYYxjfQbUbbUC8WBoc=
+
+Name: sbin/postrecoveryboot.sh
+SHA1-Digest: TEl7RnTxqcThXKal97dn1PuPNnM=
+
+Name: res/images/icon_clockwork.png
+SHA1-Digest: TbMm4w2ztG62AhLIJ+isuon5IL0=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: 7kHDBvyPyh0F3G0VF80whUiqN9Q=
+
+Name: sbin/mke2fs
+SHA1-Digest: 7yiyFlHynFLWDNzpaggO+Ldv4KE=
+
+Name: sbin/e2fsck
+SHA1-Digest: Zjwlwdx8Q5A9xA7bRQ/jLyKJ8Lg=
+
+Name: sbin/fix_permissions
+SHA1-Digest: 8EYJ91hVgAB8wdNl2C35LdZBzO4=
+
+Name: res/images/indeterminate5.png
+SHA1-Digest: 3/KaYZ3IZ5Fq3821z+wawfOEZHI=
+
+Name: etc/recovery.fstab
+SHA1-Digest: Kj9VUqufzWcZgPtju1ON3LOZimc=
+
+Name: res/keys
+SHA1-Digest: QIyULhTV2UqdWl/XdAb+kIQUH94=
+
+Name: res/images/icon_installing.png
+SHA1-Digest: 7IZ48fzqJjTeZ+bJGZ+9ZkRtKqA=
+
+Name: res/images/icon_error.png
+SHA1-Digest: 5JkDSLvahZO76LlGk7hg0hwhlps=
+
+Name: sbin/killrecovery.sh
+SHA1-Digest: 1LrTB0/WRdSIYIde/XUlGBV1UbE=
+
+Name: res/images/progress_fill.png
+SHA1-Digest: P3+I/d5XrSkA1Z2GTZab9w6WbzU=
+
+Name: res/images/indeterminate4.png
+SHA1-Digest: v0AKDgDVEnWlENTKGOVV1ZBWCt4=
+

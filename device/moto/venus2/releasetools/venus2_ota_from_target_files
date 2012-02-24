@@ -365,8 +365,12 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Mount("/system")
   script.UnpackPackageDir("system", "/system")
 
+  script.RunTouchFirstBoot()
+
   symlinks = CopySystemFiles(input_zip, output_zip)
   script.MakeSymlinks(symlinks)
+
+  script.WeirdSymlinks()
 
   Item.GetMetadata(input_zip)
   Item.Get("system").SetPermissions(script)
@@ -376,6 +380,8 @@ def WriteFullOTAPackage(input_zip, output_zip):
   if OPTIONS.backuptool:
     script.ShowProgress(0.2, 10)
     script.RunBackup("restore")
+
+  script.BootMenuPermissions()
 
   script.RunChkKineto()
 

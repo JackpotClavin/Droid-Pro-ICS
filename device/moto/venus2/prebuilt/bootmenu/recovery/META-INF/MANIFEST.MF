@@ -1,0 +1,81 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+
+Name: res/images/indeterminate3.png
+SHA1-Digest: 7T7ci21z03hT9CZZwU8FOXou1qg=
+
+Name: sbin/adbd
+SHA1-Digest: sE5IkQpouxgPbeoVJtHNZH4CvTk=
+
+Name: sbin/sdparted
+SHA1-Digest: R4rFZtj/M9XtwN57AA9BgOlNLH0=
+
+Name: res/images/progress_empty.png
+SHA1-Digest: +3LCPJ+LxxlYEe4+md+TGlx7q68=
+
+Name: res/images/indeterminate2.png
+SHA1-Digest: iVMQq6/aediy8/9hrX3zXQ5+Q+A=
+
+Name: sbin/nandroid-md5.sh
+SHA1-Digest: uRtWFp3fddg0Mf2vHT2pI504Nec=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: Zh6dup+eriA3ds+bcrVihm7NWTI=
+
+Name: sbin/recovery
+SHA1-Digest: nD+5HWjwKePbx9jn8JU5lG1DbTY=
+
+Name: sbin/tune2fs
+SHA1-Digest: edg+siKuzi0JfGlmPsUT+1pu1Zc=
+
+Name: res/images/indeterminate1.png
+SHA1-Digest: Ii3FrD2PU8qctv4nAdhi9adkNm8=
+
+Name: res/images/indeterminate6.png
+SHA1-Digest: UtgPJSkrHbV3CkdxYCEbI02/Kbs=
+
+Name: sbin/parted
+SHA1-Digest: S0e0XURYGoVYiwzs1fyXtXBEIR0=
+
+Name: sbin/postrecoveryboot.sh
+SHA1-Digest: xRl9GkS3Iiq8LlyetpdhvcDyiiw=
+
+Name: res/images/icon_clockwork.png
+SHA1-Digest: Tn5lgL0W1BBMiJ4VTDWcYgPh3gY=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: FHnJ14yZ4Mbn5Tph1GVdk7bu5gw=
+
+Name: sbin/mke2fs
+SHA1-Digest: BRAR2ujgY0RgSVVGFOkXALR1bFs=
+
+Name: sbin/e2fsck
+SHA1-Digest: XbUTRH/wKzFs0KncFuVCk6ZVngo=
+
+Name: sbin/fix_permissions
+SHA1-Digest: 07XISFwsvb8DYxuMicSSArFjb7U=
+
+Name: res/images/indeterminate5.png
+SHA1-Digest: 63HROrmcXDLpr7lWj7rCeSjqnuA=
+
+Name: etc/recovery.fstab
+SHA1-Digest: 5nY1UJWZIRVEsxjWMR+j6XsQ7KM=
+
+Name: res/keys
+SHA1-Digest: wjJMY4s/6/vKDphhfAlogz7UCVw=
+
+Name: res/images/icon_installing.png
+SHA1-Digest: 7celvc+76OitTtGzLBLh6Cbmcwc=
+
+Name: res/images/icon_error.png
+SHA1-Digest: g6TzjREZ6Z6Gb+RhBYSHz66uiJE=
+
+Name: sbin/killrecovery.sh
+SHA1-Digest: rOn+SfKbqomIqu77Z5lRdEe2cB0=
+
+Name: res/images/progress_fill.png
+SHA1-Digest: nc5D3OgZ6U7gW5mKf8upIL6DAgc=
+
+Name: res/images/indeterminate4.png
+SHA1-Digest: CCALYoxxpDudCToBJVNcUGYfNU8=
+

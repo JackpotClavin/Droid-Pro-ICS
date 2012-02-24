@@ -17,13 +17,10 @@
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
     vendor/moto/venus2/proprietary/lib/libmoto_gps.so:obj/lib/libmoto_gps.so \
-    vendor/moto/venus2/proprietary/lib/libarcsoft.so:obj/lib/libarcsoft.so \
     vendor/moto/venus2/proprietary/lib/libcamera.so:obj/lib/libcamera.so \
     vendor/moto/venus2/proprietary/lib/libnmea.so:obj/lib/libnmea.so \
     vendor/moto/venus2/proprietary/lib/libril_rds.so:obj/lib/libril_rds.so \
-    vendor/moto/venus2/proprietary/lib/librds_util.so:obj/lib/librds_util.so \
-    vendor/moto/venus2/proprietary/lib/libsmiledetect.so:obj/lib/libsmiledetect.so \
-    vendor/moto/venus2/proprietary/lib/hw/gralloc.omap3.so:obj/lib/hw/gralloc.omap3.so
+    vendor/moto/venus2/proprietary/lib/librds_util.so:obj/lib/librds_util.so
 
 PRODUCT_COPY_FILES += \
     vendor/moto/venus2/proprietary/app/PhoneConfig.apk:/system/app/PhoneConfig.apk \
@@ -120,7 +117,7 @@ PRODUCT_COPY_FILES += \
     vendor/moto/venus2/proprietary/lib/libbattd.so:/system/lib/libbattd.so \
     vendor/moto/venus2/proprietary/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
     vendor/moto/venus2/proprietary/lib/libpppd_plugin-ril.so:/system/lib/libpppd_plugin-ril.so \
-    vendor/moto/venus2/proprietary/etc/pppd-ril.options:/system/etc/ppp/peers/pppd-ril.options \
+    vendor/moto/venus2/proprietary/etc/ppp/peers/pppd-ril.options:/system/etc/ppp/peers/pppd-ril.options \
     vendor/moto/venus2/proprietary/lib/libpppd_plugin.so:/system/lib/libpppd_plugin.so \
     vendor/moto/venus2/proprietary/lib/libusc.so:/system/lib/libusc.so \
     vendor/moto/venus2/proprietary/lib/libcamera.so:/system/lib/libcamera.so \

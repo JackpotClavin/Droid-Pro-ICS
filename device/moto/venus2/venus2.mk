@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
 # Hijack files
 PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/bin/hijack:system/bin/hijack \
+    $(DEVICE_PREBUILT)/bin/bootmenu:system/bin/bootmenu \
     $(DEVICE_PREBUILT)/bin/adbd:system/bin/adbd \
     $(DEVICE_PREBUILT)/bin/hijack.log_dump:system/bin/hijack.log_dump \
     $(DEVICE_PREBUILT)/ramdisk/default.prop:root/default.prop \
@@ -201,6 +202,7 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, hardware/ti/omap3/Android.mk)
 $(call inherit-product, vendor/moto/venus2/venus2-vendor.mk)
+$(call inherit-product, device/moto/venus2/prebuilt/bootmenu/Bootmenu.mk)
 $(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, build/target/product/full_base.mk)
 

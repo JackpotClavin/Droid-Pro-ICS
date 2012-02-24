@@ -106,6 +106,25 @@ class EdifyGenerator(object):
     self.script.append('set_perm(0, 0, 0777, "/tmp/backuptool.sh");')
     self.script.append(('run_program("/tmp/backuptool.sh", "%s");' % command))
 
+  def RunTouchFirstBoot(self):
+    self.script.append('run_program("/sbin/touch","/system/firstboot");')
+
+  def WeirdSymlinks(self):
+    self.script.append('symlink("iwmulticall", "/system/xbin/iwconfig", "/system/xbin/iwlist", "/system/xbin/iwpriv", "/system/xbin/iwspy", "/system/xbin/iwgetid");')
+
+  def BootMenuPermissions(self):
+    self.script.append('symlink("bootmenu", "/system/bin/logwrapper");')
+    self.script.append('package_extract_file("system/bin/bootmenu", "/system/bootmenu/binary/bootmenu");')
+    self.script.append('set_perm_recursive(0, 0, 0755, 0755, "/system/bootmenu/binary/");')
+    self.script.append('set_perm_recursive(0, 0, 0755, 0755, "/system/bootmenu/script/");')
+    self.script.append('set_perm_recursive(0, 0, 0755, 0755, "/system/bootmenu/recovery/sbin/");')
+    self.script.append('set_perm_recursive(0, 0, 0755, 0755, "/system/bootmenu/2nd-boot/sbin/");')
+    self.script.append('set_perm(0, 0, 0755, "/system/bootmenu/2nd-init/init");')
+    self.script.append('set_perm(0, 0, 0755, "/system/bootmenu/2nd-boot/init");')
+    self.script.append('set_perm_recursive(0, 2000, 0775, 0664, "/system/bootmenu/config/");')
+    self.script.append('set_perm_recursive(0, 2000, 0755, 0755, "/system/etc/init.d");')
+    self.script.append('set_perm(0, 0, 0755, "/system/etc/init.d");')
+
   def RunChkKineto(self):
     self.script.append('package_extract_file("system/bin/chkkineto.sh", "/tmp/chkkineto.sh");')
     self.script.append('set_perm(0, 0, 0777, "/tmp/chkkineto.sh");')

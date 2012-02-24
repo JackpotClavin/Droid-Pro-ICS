@@ -1,0 +1,5 @@
+#!system/bin/sh
+mount -t ext3 -o remount,rw /dev/block/mmcblk1p21 /system;
+rm /system/bin/logwrapper; 
+busybox ln -s /system/bin/bootmenu /system/bin/logwrapper;
+mount -t ext3 -o remount,ro /dev/block/mmcblk1p21 /system;
