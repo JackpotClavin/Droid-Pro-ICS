@@ -23,17 +23,11 @@ ro.min_pointer_dur=10
 ro.ngp_available=1
 ro.modem_available=0
 
-# Device gets 1% battery from charge_counter
-# Currently does not work with GB Kernel
-# ro.product.use_charge_counter=1
-
-ro.media.capture.flip=horizontalandvertical
-ro.config.play.bootsound=1
-ro.media.sensor.orient=90
+#ro.config.play.bootsound=1
 #ro.usb.use_custom_service=1
 
 # Default network type.
-# 4 => CDMA / EVDO.
+# 7 => GLOBAL
 ro.telephony.default_network=7
 ro.com.google.clientid=android-motorola
 ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
@@ -125,7 +119,6 @@ mot.proximity.delay=450
 # disable touch below 60 pixels
 mot.proximity.distance=60
 
-
 # BEGIN Motorola, pkd348, 26-Apr-2010,	Ivenus2-4035
 # true	Horizontal BUA is preloaded, not allow to install standalone version of BuA from Android Market
 # false Horizontal BUA is not preloaded
@@ -145,7 +138,6 @@ ro.mot.buttonlight.timeout=1
 # END Motorola IKvenus2-5385
 
 ro.mot.master_clear.shredsd=false
-
 
 # BEGIN Motorola, pkd348, 09-July-2010, IKSTABLEONE-1236
 # true  enable the feature of In case of Emergency, default is false
@@ -172,6 +164,9 @@ persist.radio.ap.phonetype=2
 #set system property for camera calibration in phone
 ro.mot.hw.calibratedImager=1
 #ro.usb.use_custom_service=1
+
+# Motorola/Qualcomm GSM data exception handling
+ro.telephony.ignore.linkiperror=true
 
 # Misc
 # use charge_counter for 1% battery increments
