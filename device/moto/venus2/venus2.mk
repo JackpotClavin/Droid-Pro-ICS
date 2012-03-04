@@ -25,6 +25,8 @@ PRODUCT_PACKAGES += \
     audio.primary.omap3 \
     libaudiohw_legacy \
     audio.a2dp.default \
+    Torch \
+    camera.venus2 \
     libaudioutils
 
 # Modem
@@ -52,7 +54,7 @@ PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
 
-# Hijack files
+# Ramdisk Files
 PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/bin/hijack:system/bin/hijack \
     $(DEVICE_PREBUILT)/bin/bootmenu:system/bin/bootmenu \
@@ -96,6 +98,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PREBUILT)/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(DEVICE_PREBUILT)/etc/powervr.ini:system/etc/powervr.ini \
     $(DEVICE_PREBUILT)/etc/vold.fstab:system/etc/vold.fstab \
+    $(DEVICE_PREBUILT)/etc/fstab:system/etc/fstab \
     $(DEVICE_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Graphics

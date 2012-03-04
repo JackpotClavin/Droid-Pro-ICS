@@ -18,6 +18,8 @@
 PRODUCT_COPY_FILES := \
     vendor/moto/venus2/proprietary/lib/libmoto_gps.so:obj/lib/libmoto_gps.so \
     vendor/moto/venus2/proprietary/lib/libcamera.so:obj/lib/libcamera.so \
+    vendor/moto/venus2/proprietary/lib/libsmiledetect.so:obj/lib/libsmiledetect.so \
+    vendor/moto/venus2/proprietary/lib/libarcsoft.so:obj/lib/libarcsoft.so \
     vendor/moto/venus2/proprietary/lib/libnmea.so:obj/lib/libnmea.so \
     vendor/moto/venus2/proprietary/lib/libril_rds.so:obj/lib/libril_rds.so \
     vendor/moto/venus2/proprietary/lib/librds_util.so:obj/lib/librds_util.so
@@ -33,6 +35,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/moto/venus2/proprietary/lib/libmoto_gps.so:/system/lib/libmoto_gps.so \
     vendor/moto/venus2/proprietary/bin/Hostapd:/system/bin/Hostapd \
+    vendor/moto/venus2/proprietary/lib/libsmiledetect.so:/system/lib/libsmiledetect.so \
+    vendor/moto/venus2/proprietary/etc/cameraCalFileDef5M.bin:/system/etc/cameraCalFileDef5M.bin \
+    vendor/moto/venus2/proprietary/lib/libarcsoftpe.so:/system/lib/libarcsoftpe.so \
+    vendor/moto/venus2/proprietary/lib/libarcsoft.so:/system/lib/libarcsoft.so \
     vendor/moto/venus2/proprietary/bin/SaveBPVer:/system/bin/SaveBPVer \
     vendor/moto/venus2/proprietary/bin/akmd2:/system/bin/akmd2 \
     vendor/moto/venus2/proprietary/bin/mot_boot_mode:/system/bin/mot_boot_mode \

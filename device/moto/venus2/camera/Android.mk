@@ -8,8 +8,6 @@ LOCAL_MODULE         := camera.venus2
 LOCAL_SRC_FILES      := cameraHal.cpp
 LOCAL_PRELINK_MODULE := false
 
-LOCAL_SRC_FILES += v4l2_utils.c overlay.cpp
-
 LOCAL_SHARED_LIBRARIES += \
     liblog \
     libutils \
@@ -18,7 +16,8 @@ LOCAL_SHARED_LIBRARIES += \
     libmedia \
     libhardware \
     libcamera_client \
-    libcamera
+    libui \
+    libcamera \
 
 LOCAL_SHARED_LIBRARIES += libdl
 
