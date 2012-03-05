@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
 # Modem
 PRODUCT_PACKAGES += \
     libreference-cdma-sms \
-    GlobalNwSwitch \
     radiooptions
 
 # HW Libs

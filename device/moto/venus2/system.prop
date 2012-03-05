@@ -102,7 +102,7 @@ ro.cdma.nbpcd=1
 # END IKvenus2-1784
 
 # BEGIN Motorola, a22417, 22-Mar-2010, IKvenus2-2345,default data roaming is on
-ro.com.android.dataroaming=true
+#ro.com.android.dataroaming=true
 # END Motorola, a22417, 22-Mar-2010, IKvenus2-2345,default data roaming is on
 persist.mot.a2dp.direct = 1
 
@@ -114,17 +114,12 @@ ro.service.start.smc=1
 persist.mot.usb.mediasync = 0
 # END Motorola, a21951, 17-Apr-2010, IKvenus2-3602
 
-#Proximity sensor debounce time
-mot.proximity.delay=450
-# disable touch below 60 pixels
-mot.proximity.distance=60
-
 # BEGIN Motorola, pkd348, 26-Apr-2010,	Ivenus2-4035
 # true	Horizontal BUA is preloaded, not allow to install standalone version of BuA from Android Market
 # false Horizontal BUA is not preloaded
 ro.HorizontalBUA=true
 #Proximity sensor debounce time
-mot.proximity.delay=450
+mot.proximity.delay=150
 mot.proximity.distance=60
 
 # BEGIN Motorola, pkd348, 26-Apr-2010,	Ivenus2-4035
