@@ -8,6 +8,8 @@ LOCAL_MODULE         := camera.venus2
 LOCAL_SRC_FILES      := cameraHal.cpp
 LOCAL_PRELINK_MODULE := false
 
+LOCAL_C_INCLUDES += $(ANDROID_BUILD_TOP)/frameworks/base/include
+
 LOCAL_SHARED_LIBRARIES += \
     liblog \
     libutils \
@@ -16,9 +18,12 @@ LOCAL_SHARED_LIBRARIES += \
     libmedia \
     libhardware \
     libcamera_client \
+    libdl \
     libui \
+    libstlport \
     libcamera \
 
-LOCAL_SHARED_LIBRARIES += libdl
+include external/stlport/libstlport.mk
 
 include $(BUILD_SHARED_LIBRARY)
+
